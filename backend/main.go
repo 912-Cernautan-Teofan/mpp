@@ -35,7 +35,7 @@ func init() {
 	conn := &url.URL{
 		Scheme:   "sqlserver",
 		User:     url.UserPassword("mpp", "mpp"),
-		Host:     fmt.Sprintf("%s:%d", "192.168.56.1", 1433),
+		Host:     fmt.Sprintf("%s:%d", "172.30.248.195", 1433),
 		RawQuery: query.Encode(),
 	}
 	db, err = gorm.Open(sqlserver.Open(conn.String()))
